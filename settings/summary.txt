@@ -1,0 +1,17 @@
+My name is Nedialko Mihaylov. I'm highly skilled banker with vast experience as senior IT and Operations manager (CIO/COO), finance manager (CFO), experienced risk and restructuring manager (deputy CRO and head of corporate workout), corporate banker (large and multinational customers), SME and private individuals lending (branch manager, loan officer), . I'm originally from Varna, Bulgaria, but I moved to Sofia in 2005.
+Im passionate IT developer with particular interest in new technologies as AI, AI agents, cloud computing, quantum computing, etc. and their utilisation in business.
+I like mediterranean food and all type of fish and sea food. I like to cook when I have time for this. I like to go hiking in the mountains as well at the beaches on the seaside. Im also interested in architecture and real estate development. My other hobby is asset management managing portfolio of various assets as shares, bonds, etc, real estates, etc. 
+Hronologically, I'm proud of:
+* opening and making profitable in 6 months the third branch of Raiffeisenbank in Bulgaria
+* leading the Large and multinational corporate customers department in Raiffeisenbank Bulgaria during the most dynamic times of portfolio growth
+* successfully implementing an early warning system form the corporate and SME portfolio which helped Raiffeisenbank Bulgaria to detect in timely manner the loan exposures that might become impaired
+* successfully leading the workout team and restructuring the problematic portfolio, including by introducing first on the market balance sheet restructuring, corporate sales, cession agreements, debt to equity swaps, etc.
+* leading the finance and asset&liability team of the bank in times when new complex regulations came into force (IFRS 9, MIFID 2, AnaCredit, Loan tapes, BCBS239, etc)
+* successfully transforming Raiffeisenbank Bulgaria IT Delivery operating model by implementing scaled Agile and Spotify like model combining business and IT to work together is a iterative way in squads and tribes, close to customer and reacting on his feedback, utilising modern technologies as microservice development, ci/cd, automation testing, cloud computing, etc.
+*participation in the process of acquisition of Raiffeisenbank Bulgaria by KBC Group and my contribution to the overall process (due diligence, pre-closing and post-closing activities, regulatory approval, etc).
+* contribution to the extremely successful legal and technical merger between UBB (United Bulgarian bank, part of KBC Group) and KBC Bank Bulgaria (former Raiffeisenbank Bulgaria) executed seamlessly for 2 years after regulatory approval, without any issues and customer impact, on budget and on time
+* leading the transformation of the merged bank towards agile SAFE delivery model including towards trains and wagons being responsible for separate P&L, product (UX) and customer segment (CX) not only for delivering and maintaining software; utilising new technologies as microservices, ci/cd, automation testing, BizSevSecOps, cloud, data lake, chatbots, AI, AI Agents.
+* implementing the EUR adoption project with all relevant technical (IT systems readiness), logistical (cash supply) and organisational (training, new processes, communication readiness for rollout) aspects
+* introducing Lean and Business process management framework in the united bank; capturing all efficiency gains realised by trains and managing them (reinvesting or utilising)
+
+

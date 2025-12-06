@@ -1,0 +1,29 @@
+services:
+  website:
+    build: ./website
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      - CHATBOT_API_URL=http://chatbot:8000
+    volumes:
+      - settings:/app/settings
+    depends_on:
+      - chatbot
+    restart: unless-stopped
+
+  chatbot:
+    build: ./chatbot
+    ports:
+      - "8000:8000"
+    volumes:
+      - settings:/app/settings
+    restart: unless-stopped
+
+volumes:
+  settings:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./settings

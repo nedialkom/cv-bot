@@ -1,0 +1,56 @@
+{
+  "name": "Nedyalko Mihaylov",
+  "title": "Executive Director • CIO/COO • Banking & Digital Transformation Leader",
+  "location": "Sofia, Bulgaria",
+  "companyTagline": "KBC Bank Bulgaria (part of KBC Group)",
+  "phone": "+359 888 123 456",
+  "email": "contact@example.com",
+  "linkedInUrl": "https://www.linkedin.com/in/nedialko-mihaylov-82381920/",
+  "bankSite": "https://www.kbcbank.bg/",
+  "aboutShort": "Senior banking executive with a focus on technology, operations and investment management. Passionate about transforming universal banking into a modern, data-driven, customer-centric business.",
+  "aboutLong": "For more than a decade, Nedialko has been working at the intersection of business strategy, information technology, and banking operations. As an executive at leading financial institutions in Bulgaria, he has led digital transformation programs, overseen complex IT and operations landscapes, and supported strategic growth initiatives. His work spans integration of new digital channels, modernization of core systems, and implementing data-driven decision frameworks to improve customer experience and operational resilience.",
+  "experience": [
+    {
+      "company": "KBC Bank Bulgaria EAD",
+      "role": "Executive Director, COO & Chief Investment Officer",
+      "period": "2017 — Present",
+      "location": "Sofia, Bulgaria",
+      "bullets": [
+        "Steers technology, operations and investment functions to support the bank's growth within KBC Group.",
+        "Leads digital transformation programs across retail and corporate banking channels.",
+        "Oversees complex post-acquisition integration and harmonization of processes and systems.",
+        "Drives governance for risk, compliance and IT security in a regulated environment."
+      ]
+    },
+    {
+      "company": "Raiffeisenbank (Bulgaria) EAD",
+      "role": "Member of the Management Board, IT & Operations",
+      "period": "Prior to 2017",
+      "location": "Sofia, Bulgaria",
+      "bullets": [
+        "Responsible for information technology and operations at a leading bank in the CEE region.",
+        "Led programs modernizing digital channels and back-office processes.",
+        "Collaborated with regional teams on innovation and fintech partnerships."
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "title": "IT Leadership Recognition",
+      "year": "2020",
+      "description": "Recognized among Bulgaria's leading IT executives for driving innovation and digital transformation in banking."
+    },
+    {
+      "title": "Fintech & Innovation Jury Participation",
+      "description": "Participated in evaluation of Bulgarian fintech start-ups in accelerator and innovation programs, supporting the local ecosystem."
+    },
+    {
+      "title": "Digital Transformation Champion",
+      "description": "Consistently advocates for cloud, automation and data-driven decision making in universal banking."
+    }
+  ],
+  "chatbot": {
+    "initialMessage": "Hello! I'm the digital AI Agent of Nedyalko Mihaylov and will answer all your questions about his experience and background. I can also get ouy in touch with him. What would you like to know?",
+    "initialState": "open"
+  }
+}

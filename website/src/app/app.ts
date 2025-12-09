@@ -51,18 +51,19 @@ export class App implements OnInit {
   currentMessage = '';
   messages: { text: string; isUser: boolean }[] = [];
   isLoading = false;
+  chatbotTitle = 'Ask me anything';
+  chatbotPlaceholder = 'Type your message...';
+  chatbotSendButton = 'Send';
+  languages: {name: string, code: string}[] = [];
+  selectedLang = 'GB';
 
   ngOnInit() {
     this.loadConfig();
-    // Add initial message immediately
-    this.messages.push({
-      text: "Hello! I'm Nedyalko Mihaylov. I'm here to answer questions about my professional experience and background. What would you like to know?",
-      isUser: false
-    });
   }
 
   loadConfig() {
-    this.http.get('/settings/config.txt', { responseType: 'text' }).subscribe({
+    const file = this.selectedLang === 'GB' ? 'config.txt' : `config_${this.selectedLang.toLowerCase()}.txt`;
+    this.http.get(`/settings/${file}`, { responseType: 'text' }).subscribe({
       next: (data) => {
         const config = JSON.parse(data);
         this.name = config.name || 'Name not found';
@@ -79,8 +80,29 @@ export class App implements OnInit {
         this.bankSite = config.bankSite || '';
 
         // Load chatbot config
-        if (config.chatbot && config.chatbot.initialState) {
-          this.chatOpen = config.chatbot.initialState === 'open';
+        if (config.chatbot) {
+          if (config.chatbot.initialState) {
+            this.chatOpen = config.chatbot.initialState === 'open';
+          }
+          if (config.chatbot.initialMessage) {
+            this.messages.push({ text: config.chatbot.initialMessage, isUser: false });
+          }
+          this.chatbotTitle = config.chatbot.title || 'Ask me anything';
+          this.chatbotPlaceholder = config.chatbot.placeholder || 'Type your message...';
+          this.chatbotSendButton = config.chatbot.sendButton || 'Send';
+        }
+        
+        if (config.languages) {
+          this.languages = config.languages;
+        }
+        
+        // Load navigation translations
+        if (config.navigation) {
+          this.sections = [
+            { id: 'about', label: config.navigation.about || 'About' },
+            { id: 'highlights', label: config.navigation.highlights || 'Highlights' },
+            { id: 'experience', label: config.navigation.experience || 'Experience' },
+          ];
         }
         this.cdr.detectChanges();
       },
@@ -105,16 +127,25 @@ export class App implements OnInit {
     this.chatOpen = !this.chatOpen;
   }
 
+  changeLanguage(code: string) {
+    this.selectedLang = code;
+    this.messages = [];
+    this.loadConfig();
+  }
+
   async sendMessage() {
     if (!this.currentMessage.trim()) return;
 
+    // Store message and clear input immediately
+    const message = this.currentMessage;
+    this.currentMessage = '';
+    
     // Add user message
-    this.messages.push({ text: this.currentMessage, isUser: true });
+    this.messages.push({ text: message, isUser: true });
     this.scrollToBottom();
 
     // Call bot API
-    await this.getBotResponse(this.currentMessage);
-    this.currentMessage = '';
+    await this.getBotResponse(message);
   }
 
   private scrollToBottom(): void {

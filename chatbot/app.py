@@ -22,16 +22,6 @@ app.add_middleware(
 load_dotenv('settings/.env')
 openai_client = OpenAI()
 
-# Gemini client for evaluation
-gemini_client = OpenAI(
-    api_key=os.getenv("GOOGLE_API_KEY"), 
-    base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
-)
-
-class Evaluation(BaseModel):
-    is_acceptable: bool
-    feedback: str
-
 # Pushover configuration
 pushover_user = os.getenv("PUSHOVER_USER")
 pushover_token = os.getenv("PUSHOVER_TOKEN")
@@ -85,7 +75,19 @@ def handle_tool_calls(tool_calls):
 
 class Me:
     def __init__(self):
-        self.name = "Nedyalko Mihaylov"
+        # Load prompts and configuration from settings
+        try:
+            with open("settings/config.txt", "r", encoding="utf-8") as c:
+                config = json.load(c)
+                self.name = config.get("name", "Assistant")
+
+            with open("settings/prompts.txt", "r", encoding="utf-8") as f:
+                prompts_config = json.load(f)
+            
+            #self.name = prompts_config.get("name", "Assistant")
+        except Exception as e:
+            print(f"Error loading name from prompts: {e}")
+            self.name = "Assistant"
         
         # Load LinkedIn and summary from settings volume
         try:
@@ -104,110 +106,16 @@ class Me:
         except:
             self.summary = "Summary not available"
         
-        # System prompt from notebook
-        self.system_prompt = f"""You are acting as {self.name}. You are answering questions on {self.name}'s website, particularly questions related to {self.name}'s career, background, skills and experience. Your responsibility is to represent {self.name} for interactions on the website as faithfully as possible. You are given a summary of {self.name}'s background and LinkedIn profile which you can use to answer questions. Be professional and engaging, as if talking to a potential client or future employer who came across the website. If you don't know the answer to any question, use your record_unknown_question tool to record the question that you couldn't answer, even if it's about something trivial or unrelated to career. If the user is engaging in discussion, try to steer them towards getting in touch via email; ask for their email and record it using your record_user_details tool.
-
-## Summary:
-{self.summary}
-
-## LinkedIn Profile:
-{self.linkedin}
-
-With this context, please chat with the user, always staying in character as {self.name}."""
-
-        self.evaluator_system_prompt = f"""You are an evaluator that decides whether a response to a question is acceptable. You are provided with a conversation between a User and an Agent. Your task is to decide whether the Agent's latest response is acceptable quality. The Agent is playing the role of {self.name} and is representing {self.name} on their website. The Agent has been instructed to be professional and engaging, as if talking to a potential client or future employer who came across the website. The Agent has been provided with context on {self.name} in the form of their summary and LinkedIn details. Here's the information:
-
-## Summary:
-{self.summary}
-
-## LinkedIn Profile:
-{self.linkedin}
-
-With this context, please evaluate the latest response, replying with whether the response is acceptable and your feedback."""
-
-        self.tools = [
-            {
-                "type": "function",
-                "function": {
-                    "name": "record_user_details",
-                    "description": "Use this tool to record that a user is interested in being in touch and provided an email address",
-                    "parameters": {
-                        "type": "object",
-                        "properties": {
-                            "email": {"type": "string", "description": "The email address of this user"},
-                            "name": {"type": "string", "description": "The user's name, if they provided it"},
-                            "notes": {"type": "string", "description": "Any additional information about the conversation that's worth recording to give context"}
-                        },
-                        "required": ["email"],
-                        "additionalProperties": False
-                    }
-                }
-            },
-            {
-                "type": "function", 
-                "function": {
-                    "name": "record_unknown_question",
-                    "description": "Always use this tool to record any question that couldn't be answered as you didn't know the answer",
-                    "parameters": {
-                        "type": "object",
-                        "properties": {
-                            "question": {"type": "string", "description": "The question that couldn't be answered"}
-                        },
-                        "required": ["question"],
-                        "additionalProperties": False
-                    }
-                }
-            }
-        ]
-
-    def evaluate(self, reply: str, message: str, history: List[Dict]) -> Evaluation:
-        user_prompt = f"""Here's the conversation between the User and the Agent:
-
-{history}
-
-Here's the latest message from the User:
-
-{message}
-
-Here's the latest response from the Agent:
-
-{reply}
-
-Please evaluate the response, replying with whether it is acceptable and your feedback."""
-        
-        messages = [
-            {"role": "system", "content": self.evaluator_system_prompt},
-            {"role": "user", "content": user_prompt}
-        ]
-        
+        # Load prompts and tools from settings
         try:
-            response = gemini_client.beta.chat.completions.parse(
-                model="gemini-2.0-flash", 
-                messages=messages, 
-                response_format=Evaluation
+            self.system_prompt = prompts_config["system_prompt"].format(
+                name=self.name, summary=self.summary, linkedin=self.linkedin
             )
-            return response.choices[0].message.parsed
+            self.tools = prompts_config["tools"]
         except Exception as e:
-            print(f"Evaluation error: {e}")
-            return Evaluation(is_acceptable=True, feedback="Evaluation failed, accepting response")
-
-    def rerun(self, reply: str, message: str, history: List[Dict], feedback: str) -> str:
-        updated_system_prompt = self.system_prompt + "\n\n## Previous answer rejected\nYou just tried to reply, but the quality control rejected your reply\n"
-        updated_system_prompt += f"## Your attempted answer:\n{reply}\n\n"
-        updated_system_prompt += f"## Reason for rejection:\n{feedback}\n\n"
-        
-        messages = [{"role": "system", "content": updated_system_prompt}] + history + [{"role": "user", "content": message}]
-        
-        try:
-            response = openai_client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=messages,
-                tools=self.tools
-            )
-            return response.choices[0].message.content
-        except Exception as e:
-            print(f"Rerun error: {e}")
-            return reply
+            print(f"Error loading prompts: {e}")
+            self.system_prompt = f"You are {self.name}. Answer questions professionally."
+            self.tools = []
 
     def get_response(self, message: str, session_id: str = "default"):
         # Get or create conversation history
@@ -240,20 +148,9 @@ Please evaluate the response, replying with whether it is acceptable and your fe
             # Add assistant response to conversation
             assistant_message = response.choices[0].message.content
             
-            # Evaluate response with Gemini
-            evaluation = self.evaluate(assistant_message, message, conversations[session_id][1:-1])  # Exclude system prompt and current user message
-            
-            if evaluation.is_acceptable:
-                print("Passed evaluation - returning reply")
-                conversations[session_id].append({"role": "assistant", "content": assistant_message})
-                return assistant_message
-            else:
-                print("Failed evaluation - retrying")
-                print(f"Feedback: {evaluation.feedback}")
-                # Rerun with feedback
-                improved_response = self.rerun(assistant_message, message, conversations[session_id][1:-1], evaluation.feedback)
-                conversations[session_id].append({"role": "assistant", "content": improved_response})
-                return improved_response
+            # Return response directly without evaluation
+            conversations[session_id].append({"role": "assistant", "content": assistant_message})
+            return assistant_message
             
         except Exception as e:
             print(f"OpenAI API error: {e}")

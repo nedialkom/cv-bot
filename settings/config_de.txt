@@ -1,0 +1,142 @@
+{
+   "name":"Nedyalko Mihaylov",
+   "title":"Geschäftsführer • Country CIO & STP Leader • Visionär der adaptiven Transformation",
+   "location":"Sofia, Bulgarien",
+   "companyTagline":"United Bulgarian Bank (Teil der KBC-Gruppe)",
+   "phone":"+359 885 400 528",
+   "email":"nedialkom@gmail.com",
+   "linkedInUrl":"https://www.linkedin.com/in/nedialko-mihaylov-82381920/",
+   "bankSite":"https://www.ubb.bg/",
+   "aboutShort":"Dynamische Bankführungskraft mit über 20 Jahren umfassender Erfahrung in IT, Betrieb, Risikomanagement und Geschäftsbanking. Als transformative Führungskraft bin ich bestrebt, fortschrittliche Technologien zu nutzen, um die betriebliche Effizienz zu steigern und ein außergewöhnliches Kundenerlebnis zu bieten.",
+   "aboutLong":"Im Laufe meiner erfolgreichen Karriere habe ich erfolgreich die Lücke zwischen Technologie und Finanzdienstleistungen geschlossen und die Entwicklung des traditionellen Bankwesens zu agilen, datengesteuerten Institutionen vorangetrieben. Mein Engagement für digitale Transformationsinitiativen und meine Leidenschaft für die Förderung des Kundenengagements durch innovative Lösungen etablieren mich als zentrale Kraft in der zukunftsorientierten Bankenlandschaft.",
+   "experience":[
+      {
+         "company":"United Bulgarian Bank AD",
+         "role":"Geschäftsführer, Country CIO & STP Leader, Mitglied des Vorstands",
+         "period":"April 2023 — Gegenwart",
+         "location":"Sofia, Bulgarien",
+         "bullets":[
+            "Förderung von Innovationen in Technologie, Betrieb und Geschäftsfunktionen zur Förderung des Wachstums innerhalb der KBC-Gruppe.",
+            "Verfechter umfassender digitaler Transformationsprogramme, die Privat- und Firmenkundenkanäle neu definieren.",
+            "Überwachung komplexer Integrationsmaßnahmen nach Übernahmen zur Gewährleistung nahtloser Kundenmigration und Prozessharmonisierung.",
+            "Aufrechterhaltung von Exzellenz in der Governance für Risikomanagement in IT-Sicherheit und Resilienz in einer regulierten Umgebung."
+         ]
+      },
+      {
+         "company":"KBC Bank Bulgaria EAD",
+         "role":"Geschäftsführer, COO & Chief Investment Officer",
+         "period":"Juli 2022 — Dezember 2023",
+         "location":"Sofia, Bulgarien",
+         "bullets":[
+            "Steuerung strategischer Initiativen in Technologie und Betrieb zur Ausrichtung auf die Vision der KBC-Gruppe.",
+            "Umsetzung transformativer digitaler Strategien, die Bankangebote modernisierten.",
+            "Verwaltung erfolgreicher Post-Akquisitions-Integration zur Erzielung operativer Synergien.",
+            "Etablierung und Stärkung von Rahmenwerken für Compliance und Risikomanagement."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Geschäftsführer Betrieb & IT, Mitglied des Vorstands",
+         "period":"Januar 2017 — Juli 2022",
+         "location":"Sofia, Bulgarien",
+         "bullets":[
+            "Orchestrierung der IT- und Betriebsoptimierung sowie der gesamten digitalen und adaptiven Transformation der Bank.",
+            "Pionierarbeit bei der Modernisierung digitaler Kanäle und Back-Office-Prozesse zur Verbesserung der Kundenzentrierung.",
+            "Förderung von Innovationen durch Aufbau strategischer Fintech-Partnerschaften in regionalen Teams."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Leiter der Finanzabteilung",
+         "period":"Oktober 2015 — Januar 2017",
+         "location":"Sofia, Bulgarien",
+         "bullets":[
+            "Leitung des Finanzbetriebs zur Einführung branchenverändernder Vorschriften wie IFRS9, BCBS-239, AnaCredit.",
+            "Anleitung von Teams bei der Bewältigung finanzieller Herausforderungen, Optimierung von Leistung und Rentabilität."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Leiter der Work-Out-Abteilung",
+         "period":"August 2011 — Oktober 2015",
+         "location":"Sofia, Bulgarien",
+         "bullets":[
+            "Leitung der erfolgreichen Restrukturierung notleidender Portfolios durch innovative Ansätze.",
+            "Einführung marktführender Strategien für Bilanzrestrukturierung und Corporate Asset Management."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Stellvertretender Leiter der Risikomanagement-Abteilung",
+         "period":"September 2009 — August 2011",
+         "location":"Sofia, Bulgarien",
+         "bullets":[
+            "Entwicklung und Umsetzung robuster Risikomanagementstrategien und Frühwarnsysteme."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Leiter der Abteilung Groß- und Multinationalkunden",
+         "period":"Januar 2006 — September 2009",
+         "location":"Sofia, Bulgarien",
+         "bullets":[
+            "Überwachung großer Firmenkunden-Portfolios bei gleichzeitiger Förderung von Wachstum und Rentabilität in dynamischen Märkten."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Filialleiter - Filiale Varna 3",
+         "period":"Mai 2005 — Januar 2006",
+         "location":"Varna, Bulgarien",
+         "bullets":[
+            "Erfolgreiche Eröffnung und Rentabilität einer neuen Filiale innerhalb von sechs Monaten, Setzung von Leistungsmaßstäben."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Kreditsachbearbeiter - Filiale Varna",
+         "period":"März 2002 — Dezember 2003",
+         "location":"Varna, Bulgarien",
+         "bullets":[
+            "Erleichterung von Kreditanträgen bei gleichzeitiger Bereitstellung maßgeschneiderter Finanzierungslösungen für Kunden."
+         ]
+      },
+      {
+         "company":"MKB Unionbank",
+         "role":"Kreditsachbearbeiter - Filiale Varna",
+         "period":"September 2000 — März 2002",
+         "location":"Varna, Bulgarien",
+         "bullets":[
+            "Bearbeitung von Kreditanträgen und Verbesserung des Kundenservice-Erlebnisses."
+         ]
+      }
+   ],
+   "highlights":[
+      {
+         "title":"Innovativer Führer der digitalen Transformation",
+         "description":"Pionierarbeit bei der Implementierung agiler Methoden und digitaler Plattformen, die die betriebliche Effizienz und Kundenzufriedenheit im Bankbetrieb erheblich verbesserten."
+      },
+      {
+         "title":"Experte für Risikomanagement und Restrukturierung",
+         "description":"Erfolgreiche Leitung der Restrukturierung notleidender Vermögenswerte bei gleichzeitiger Einführung branchenführender Risikomanagement-Frameworks und Restrukturierungstechniken."
+      }
+   ],
+   "chatbot":{
+      "initialMessage":"Hallo! Ich bin Nedyalkos digitaler KI-Avatar, wie kann ich Ihnen helfen?",
+      "initialState":"open",
+      "title":"Lass uns chatten",
+      "placeholder":"Geben Sie Ihre Nachricht ein...",
+      "sendButton":"Senden..."
+   },
+   "navigation":{
+      "about":"Über mich",
+      "highlights":"Höhepunkte",
+      "experience":"Erfahrung"
+   },
+   "languages":[
+      {"name":"English", "code":"GB"},
+      {"name":"Bulgarian", "code":"BG"},
+      {"name":"German", "code":"DE"},
+      {"name":"Russian", "code":"RU"}
+   ]
+}

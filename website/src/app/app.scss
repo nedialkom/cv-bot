@@ -91,6 +91,36 @@
   display: flex;
   margin-left: 600px;
   width: calc(100% - 600px);
+  position: relative;
+  
+  .language-selector {
+    position: fixed;
+    right: 320px;
+    top: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+  }
+  
+  .lang-option {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+    
+    &.active {
+      opacity: 1;
+    }
+    
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+    }
+  }
 }
 
 .main {

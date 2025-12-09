@@ -1,56 +1,142 @@
 {
-  "name": "Nedyalko Mihaylov",
-  "title": "Executive Director • CIO/COO • Banking & Digital Transformation Leader",
-  "location": "Sofia, Bulgaria",
-  "companyTagline": "KBC Bank Bulgaria (part of KBC Group)",
-  "phone": "+359 888 123 456",
-  "email": "contact@example.com",
-  "linkedInUrl": "https://www.linkedin.com/in/nedialko-mihaylov-82381920/",
-  "bankSite": "https://www.kbcbank.bg/",
-  "aboutShort": "Senior banking executive with a focus on technology, operations and investment management. Passionate about transforming universal banking into a modern, data-driven, customer-centric business.",
-  "aboutLong": "For more than a decade, Nedialko has been working at the intersection of business strategy, information technology, and banking operations. As an executive at leading financial institutions in Bulgaria, he has led digital transformation programs, overseen complex IT and operations landscapes, and supported strategic growth initiatives. His work spans integration of new digital channels, modernization of core systems, and implementing data-driven decision frameworks to improve customer experience and operational resilience.",
-  "experience": [
-    {
-      "company": "KBC Bank Bulgaria EAD",
-      "role": "Executive Director, COO & Chief Investment Officer",
-      "period": "2017 — Present",
-      "location": "Sofia, Bulgaria",
-      "bullets": [
-        "Steers technology, operations and investment functions to support the bank's growth within KBC Group.",
-        "Leads digital transformation programs across retail and corporate banking channels.",
-        "Oversees complex post-acquisition integration and harmonization of processes and systems.",
-        "Drives governance for risk, compliance and IT security in a regulated environment."
-      ]
-    },
-    {
-      "company": "Raiffeisenbank (Bulgaria) EAD",
-      "role": "Member of the Management Board, IT & Operations",
-      "period": "Prior to 2017",
-      "location": "Sofia, Bulgaria",
-      "bullets": [
-        "Responsible for information technology and operations at a leading bank in the CEE region.",
-        "Led programs modernizing digital channels and back-office processes.",
-        "Collaborated with regional teams on innovation and fintech partnerships."
-      ]
-    }
-  ],
-  "highlights": [
-    {
-      "title": "IT Leadership Recognition",
-      "year": "2020",
-      "description": "Recognized among Bulgaria's leading IT executives for driving innovation and digital transformation in banking."
-    },
-    {
-      "title": "Fintech & Innovation Jury Participation",
-      "description": "Participated in evaluation of Bulgarian fintech start-ups in accelerator and innovation programs, supporting the local ecosystem."
-    },
-    {
-      "title": "Digital Transformation Champion",
-      "description": "Consistently advocates for cloud, automation and data-driven decision making in universal banking."
-    }
-  ],
-  "chatbot": {
-    "initialMessage": "Hello! I'm the digital AI Agent of Nedyalko Mihaylov and will answer all your questions about his experience and background. I can also get ouy in touch with him. What would you like to know?",
-    "initialState": "open"
-  }
+   "name":"Nedyalko Mihaylov",
+   "title":"Executive Director • Country CIO & STP Leader • Adaptive Transformation Visionary",
+   "location":"Sofia, Bulgaria",
+   "companyTagline":"United Bulgarian Bank (Part of KBC Group)",
+   "phone":"+359 885 400 528",
+   "email":"nedialkom@gmail.com",
+   "linkedInUrl":"https://www.linkedin.com/in/nedialko-mihaylov-82381920/",
+   "bankSite":"https://www.ubb.bg/",
+   "aboutShort":"Dynamic banking executive with over 20 years of extensive experience in IT, Operations, Risk management and Commercial banking. As a transformative leader, I am committed to leveraging advanced technologies to enhance operational efficiency and deliver an exceptional customer experience.",
+   "aboutLong":"Throughout my robust career, I have successfully bridged the gap between technology and financial services, driving the evolution of traditional banking into agile, data-centric institutions. My dedication to digital transformation initiatives and my passion for fostering customer engagement through innovative solutions establish me as a pivotal force in the forward-looking landscape of banking.",
+   "experience":[
+      {
+         "company":"United Bulgarian Bank AD",
+         "role":"Executive Director, Country CIO & STP Leader, Member of the Management Board",
+         "period":"April 2023 — Present",
+         "location":"Sofia, Bulgaria",
+         "bullets":[
+            "Drive innovation across technology, operations, and business functions to propel growth within KBC Group.",
+            "Champion comprehensive digital transformation programs that redefine retail and corporate banking channels.",
+            "Oversee complex integration efforts post-acquisition, ensuring seamless customer migration and process harmonization.",
+            "Uphold excellence in governance for risk management in IT security and resilience in a regulated landscape."
+         ]
+      },
+      {
+         "company":"KBC Bank Bulgaria EAD",
+         "role":"Executive Director, COO & Chief Investment Officer",
+         "period":"July 2022 — December 2023",
+         "location":"Sofia, Bulgaria",
+         "bullets":[
+            "Steered strategic initiatives within technology and operations to align with KBC Group's vision.",
+            "Executed transformative digital strategies that modernized banking offerings.",
+            "Managed successful post-acquisition integration to achieve operational synergies.",
+            "Established and fortified frameworks for compliance and risk management."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Executive Director Operations & IT, Member of the Management Board",
+         "period":"January 2017 — July 2022",
+         "location":"Sofia, Bulgaria",
+         "bullets":[
+            "Orchestrated IT and operations optimization and overall bank digital and adaptive transformation.",
+            "Pioneered modernization of digital channels and back-office processes to enhance customer centricity",
+            "Fostered innovation by establishing strategic fintech partnerships across regional teams."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Head of Finance Division",
+         "period":"October 2015 — January 2017",
+         "location":"Sofia, Bulgaria",
+         "bullets":[
+            "Led finance operations towards the adoption of industry changing regulations such as IFRS9, BCBS-239, AnaCredit.",
+            "Guided teams in navigating financial challenges, optimizing performance and profitability."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Head of Work Out Division",
+         "period":"August 2011 — October 2015",
+         "location":"Sofia, Bulgaria",
+         "bullets":[
+            "Spearheaded the successful restructuring of non-performing portfolios, implementing innovative approaches.",
+            "Introduced market-leading strategies for balance sheet restructuring and corporate asset management."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Deputy Head of Risk Management Division",
+         "period":"September 2009 — August 2011",
+         "location":"Sofia, Bulgaria",
+         "bullets":[
+            "Developed and executed robust risk management strategies and early warning mechanisms."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Head of Large & Multinational Customers Department",
+         "period":"January 2006 — September 2009",
+         "location":"Sofia, Bulgaria",
+         "bullets":[
+            "Oversaw large corporate banking portfolios while driving growth and profitability in dynamic markets."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Branch Manager - Varna 3 Branch",
+         "period":"May 2005 — January 2006",
+         "location":"Varna, Bulgaria",
+         "bullets":[
+            "Successfully launched and achieved profitability for a new branch within six months, setting performance benchmarks."
+         ]
+      },
+      {
+         "company":"Raiffeisenbank (Bulgaria) EAD",
+         "role":"Loan Officer - Varna Branch",
+         "period":"March 2002 — December 2003",
+         "location":"Varna, Bulgaria",
+         "bullets":[
+            "Facilitated loan applications while delivering tailored financing solutions to clients."
+         ]
+      },
+      {
+         "company":"MKB Unionbank",
+         "role":"Loan Officer - Varna Branch",
+         "period":"September 2000 — March 2002",
+         "location":"Varna, Bulgaria",
+         "bullets":[
+            "Processing loan applications and enhancing customer service experiences."
+         ]
+      }
+   ],
+   "highlights":[
+      {
+         "title":"Innovative Digital Transformation Leader",
+         "description":"Pioneered the implementation of agile methodologies and digital platforms that significantly improved operational efficiency and customer satisfaction across banking operations."
+      },
+      {
+         "title":"Expert in Risk Management and Restructuring",
+         "description":"Successfully led the restructuring of non-performing assets while introducing industry-leading risk management frameworks and restructuring techniques."
+      }
+   ],
+   "chatbot":{
+      "initialMessage":"Hello! I'm Nedyalko's digital AI avatar, how can I help you?",
+      "initialState":"open",
+      "title":"Let's chat",
+      "placeholder":"Type your message...",
+      "sendButton":"Send..."
+   },
+   "navigation":{
+      "about":"About",
+      "highlights":"Highlights",
+      "experience":"Experience"
+   },
+   "languages":[
+      {"name":"English", "code":"GB"},
+      {"name":"Bulgarian", "code":"BG"},
+      {"name":"German", "code":"DE"},
+      {"name":"Russian", "code":"RU"}
+   ]
 }
